@@ -8,7 +8,14 @@ class IQOptionInline(admin.StackedInline):
     model = IQOption
     can_delete = False
     verbose_name_plural = 'IQ Option'
-    readonly_fields = ('iqoption_real_saldo', 'iqoption_practice_saldo')
+    fields = (
+        'iqoption_permitir', 
+        'iqoption_email', 
+        'iqoption_password', 
+        'iqoption_type', 
+        'iqoption_real_saldo_display', 
+        'iqoption_practice_saldo_display'
+    )
 
     def has_delete_permission(self, request, obj=None):
         return False
@@ -17,6 +24,9 @@ class IQOptionInline(admin.StackedInline):
         formset = super().get_formset(request, obj, **kwargs)
         formset.can_delete = False
         return formset
+
+    def get_readonly_fields(self, request, obj=None):
+        return ('iqoption_real_saldo_display', 'iqoption_practice_saldo_display')
 
 class CustomUserAdmin(BaseUserAdmin):
     inlines = (IQOptionInline,)

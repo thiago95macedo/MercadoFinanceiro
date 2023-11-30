@@ -33,6 +33,10 @@ def atualizar_saldo_real(self, iqoption_record, IQAPI):
         # Atualizar o saldo no registro
         iqoption_record.iqoption_real_saldo = real_balance
 
+        # Formatar o saldo e armazená-lo no novo campo
+        formatted_real_balance = "{:,.2f}".format(real_balance).replace(",", "x").replace(".", ",").replace("x", ".")
+        iqoption_record.iqoption_real_saldo_display = formatted_real_balance
+
         logger.info("Saldo da conta Real atualizado com sucesso!")
 
 @shared_task(bind=True)
@@ -44,5 +48,9 @@ def atualizar_saldo_pratica(self, iqoption_record, IQAPI):
 
         # Atualizar o saldo no registro
         iqoption_record.iqoption_practice_saldo = practice_balance
+
+        # Formatar o saldo e armazená-lo no novo campo
+        formatted_practice_balance = "{:,.2f}".format(practice_balance).replace(",", "x").replace(".", ",").replace("x", ".")
+        iqoption_record.iqoption_practice_saldo_display = formatted_practice_balance
 
         logger.info("Saldo da conta de Treinamento atualizado com sucesso!")
