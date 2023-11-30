@@ -7,6 +7,7 @@ class IQOptionInline(admin.StackedInline):
     model = IQOption
     can_delete = False
     verbose_name_plural = 'IQ Option'
+    readonly_fields = ('iqoption_real_saldo', 'iqoption_practice_saldo')
 
     def has_delete_permission(self, request, obj=None):
         return False
