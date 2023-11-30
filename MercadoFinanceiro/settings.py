@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # Aplicações
     'accounts',
+    'iqoption',
 ]
 
 MIDDLEWARE = [
