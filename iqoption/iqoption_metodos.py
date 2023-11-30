@@ -22,27 +22,24 @@ def login_iqoption(iqoption_record):
             logger.error('Falha ao conectar à IQ Option como %s', iqoption_record.iqoption_email)
             continue
 
-
 def atualizar_saldo_real(self, IQAPI):
-    if self.login_iqoption:
-        if IQAPI.check_connect():
-            # Obter saldo da conta real
-            IQAPI.change_balance('REAL')
-            real_balance = IQAPI.get_balance()
+    if IQAPI.check_connect():
+        # Obter saldo da conta real
+        IQAPI.change_balance('REAL')
+        real_balance = IQAPI.get_balance()
 
-            # Atualizar o saldo no registro
-            self.iqoption_real_saldo = real_balance
+        # Atualizar o saldo no registro
+        self.iqoption_real_saldo = real_balance
 
-            logger.debug("Saldo da conta Real atualizado com sucesso!")
+        logger.debug("Saldo da conta Real atualizado com sucesso!")
 
 def atualizar_saldo_pratica(self, IQAPI):
-    if self.login_iqoption:
-        if IQAPI.check_connect():
-            # Obter saldo da conta demo (prática)
-            IQAPI.change_balance('PRACTICE')
-            practice_balance = IQAPI.get_balance()
+    if IQAPI.check_connect():
+        # Obter saldo da conta demo (prática)
+        IQAPI.change_balance('PRACTICE')
+        practice_balance = IQAPI.get_balance()
 
-            # Atualizar o saldo no registro
-            self.iqoption_practice_saldo = practice_balance
+        # Atualizar o saldo no registro
+        self.iqoption_practice_saldo = practice_balance
 
-            logger.debug("Saldo da conta de Treinamento atualizado com sucesso!")
+        logger.debug("Saldo da conta de Treinamento atualizado com sucesso!")
