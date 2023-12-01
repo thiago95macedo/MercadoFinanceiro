@@ -2,6 +2,7 @@ import logging
 from celery import shared_task
 from iqoptionapi.stable_api import IQ_Option
 from accounts.models import IQOption
+from iqoption.models import AtivosBinarios
 
 # Configurar o logging
 logging.basicConfig(level=logging.INFO)
@@ -54,3 +55,26 @@ def atualizar_saldo_pratica(self, iqoption_record, IQAPI):
         iqoption_record.iqoption_practice_saldo_display = formatted_practice_balance
 
         logger.info("Saldo da conta de Treinamento atualizado com sucesso!")
+
+
+@shared_task(bind=True)
+def atualizar_ativos_binarios(self, iqoption_record, IQAPI):
+    ALL_Asset = IQAPI.get_all_open_time()
+
+    for ativo in ALL_Asset["turbo"]:
+        novo_ativo, created = AtivosBinarios.objects.get_or_create(ativo_binario=ativo)
+        novo_ativo.ativo_binario_m1 = ALL_Asset["turbo"][ativo]["open"]
+        if not created:
+            # Atualize outros campos do objeto existente aqui
+            pass
+        novo_ativo.save()
+
+    for ativo in ALL_Asset["binary"]:
+        novo_ativo, created = AtivosBinarios.objects.get_or_create(ativo_binario=ativo)
+        novo_ativo.ativo_binario_m5 = ALL_Asset["binary"][ativo]["open"]
+        if not created:
+            # Atualize outros campos do objeto existente aqui
+            pass
+        novo_ativo.save()
+
+    logger.info('Atualização do status dos ativos concluída.')

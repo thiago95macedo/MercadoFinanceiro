@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 from .models import IQOption
-from iqoption.iqoption_metodos import login_iqoption, atualizar_saldo_real, atualizar_saldo_pratica
+from iqoption.iqoption_metodos import login_iqoption, atualizar_saldo_real, atualizar_saldo_pratica, atualizar_ativos_binarios
 
 class IQOptionInline(admin.StackedInline):
     model = IQOption
@@ -37,7 +37,9 @@ class CustomUserAdmin(BaseUserAdmin):
             IQAPI = login_iqoption(obj.iqoption)
             atualizar_saldo_real(obj.iqoption, IQAPI)
             atualizar_saldo_pratica(obj.iqoption, IQAPI)
+            atualizar_ativos_binarios(obj.iqoption, IQAPI)
             obj.iqoption.save()
+            
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
