@@ -64,6 +64,7 @@ def atualizar_ativos_binarios(self, iqoption_record, IQAPI):
     for ativo in ALL_Asset["turbo"]:
         novo_ativo, created = AtivosBinarios.objects.get_or_create(ativo_binario=ativo)
         novo_ativo.ativo_binario_m1 = ALL_Asset["turbo"][ativo]["open"]
+        novo_ativo.ativo_binario_aberto = novo_ativo.ativo_binario_m1
         if not created:
             # Atualize outros campos do objeto existente aqui
             pass
@@ -72,6 +73,7 @@ def atualizar_ativos_binarios(self, iqoption_record, IQAPI):
     for ativo in ALL_Asset["binary"]:
         novo_ativo, created = AtivosBinarios.objects.get_or_create(ativo_binario=ativo)
         novo_ativo.ativo_binario_m5 = ALL_Asset["binary"][ativo]["open"]
+        novo_ativo.ativo_binario_aberto = novo_ativo.ativo_binario_m5
         if not created:
             # Atualize outros campos do objeto existente aqui
             pass
