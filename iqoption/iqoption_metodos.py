@@ -3,6 +3,8 @@ from celery import shared_task
 from iqoptionapi.stable_api import IQ_Option
 from accounts.models import IQOption
 from iqoption.models import AtivosBinarios
+from decimal import Decimal
+
 
 # Configurar o logging
 logging.basicConfig(level=logging.INFO)
@@ -60,11 +62,14 @@ def atualizar_saldo_pratica(self, iqoption_record, IQAPI):
 @shared_task(bind=True)
 def atualizar_ativos_binarios(self, iqoption_record, IQAPI):
     ALL_Asset = IQAPI.get_all_open_time()
+    ALL_Profit = IQAPI.get_all_profit()  # Obter informações de lucro
 
     for ativo in ALL_Asset["turbo"]:
         novo_ativo, created = AtivosBinarios.objects.get_or_create(ativo_binario=ativo)
         novo_ativo.ativo_binario_m1 = ALL_Asset["turbo"][ativo]["open"]
         novo_ativo.ativo_binario_aberto = novo_ativo.ativo_binario_m1
+        if ativo in ALL_Profit:
+            novo_ativo.ativo_binario_m1_lucro = Decimal(ALL_Profit[ativo]["turbo"])
         if not created:
             # Atualize outros campos do objeto existente aqui
             pass
@@ -74,6 +79,8 @@ def atualizar_ativos_binarios(self, iqoption_record, IQAPI):
         novo_ativo, created = AtivosBinarios.objects.get_or_create(ativo_binario=ativo)
         novo_ativo.ativo_binario_m5 = ALL_Asset["binary"][ativo]["open"]
         novo_ativo.ativo_binario_aberto = novo_ativo.ativo_binario_m5
+        if ativo in ALL_Profit:
+            novo_ativo.ativo_binario_m5_lucro = Decimal(ALL_Profit[ativo]["binary"])
         if not created:
             # Atualize outros campos do objeto existente aqui
             pass
