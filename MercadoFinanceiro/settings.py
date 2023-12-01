@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Aplicações de terceiros
+    'django_crontab',
 
     # Aplicações
     'accounts',
@@ -132,3 +133,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configurações do Django Crontab (Exrcutar tarefas agendadas)
+# https://pypi.org/project/django-crontab/
+
+CRONJOBS = [
+    ('5,10,15,20,25,30,35,40,45,50,55 * * * *', 'iqoption.cron.cron_atualizar_ativos_binarios')
+]

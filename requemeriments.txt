@@ -1,3 +1,4 @@
-Django==4.2.7
-psycopg2==2.9.9
-celery==5.3.6
+Django
+django-crontab
+psycopg2
+celery
