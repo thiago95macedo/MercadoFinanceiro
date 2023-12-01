@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Aplicações de terceiros
+    'django_celery_beat',
+
     # Aplicações
     'accounts',
     'iqoption',
