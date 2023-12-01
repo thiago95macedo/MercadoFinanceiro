@@ -1,6 +1,9 @@
 #!/bin/bash
 # © 2023 Thiago Macêdo, WETH Systems
 
+python manage.py crontab add
+python manage.py crontab show
+python manage.py crontab remove
 
 #--------------------------------------------------
 # Definindo as variáveis de ambiente
