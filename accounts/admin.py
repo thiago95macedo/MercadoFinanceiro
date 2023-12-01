@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 from .models import IQOption
-from iqoption.iqoption_metodos import login_iqoption, atualizar_saldo_real, atualizar_saldo_pratica, atualizar_ativos_binarios
+from iqoption.tasks import login_iqoption, atualizar_saldo_real, atualizar_saldo_pratica, atualizar_ativos_binarios
 
 class IQOptionInline(admin.StackedInline):
     model = IQOption

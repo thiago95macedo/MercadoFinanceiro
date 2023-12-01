@@ -1,19 +1,6 @@
 #!/bin/bash
 # © 2023 Thiago Macêdo, WETH Systems
 
-sudo apt-get install -y rabbitmq-server
-sudo service rabbitmq-server start
-sudo service rabbitmq-server status
-
-screen -S celery
-celery -A MercadoFinanceiro beat
-# Pressione Ctrl+A e, em seguida, D para desanexar da sessão do screen
-
-celery -A MercadoFinanceiro beat &
-celery -A MercadoFinanceiro worker --loglevel=info &
-sudo apt update
-
-
 
 #--------------------------------------------------
 # Definindo as variáveis de ambiente

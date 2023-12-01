@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-from celery.schedules import timedelta
-from celery.schedules import crontab
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Aplicações de terceiros
-    'django_celery_beat',
 
     # Aplicações
     'accounts',
@@ -135,14 +132,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Configurações do Celery Beat (agendamento de tarefas)
-
-CELERY_BEAT_SCHEDULE = {
-    'atualizar_ativos_binarios': {
-        'task': 'iqoption.iqoption_modelos.atualizar_ativos_binarios',
-        'schedule': crontab(minute='0,20,40'),  # executa a cada 20 minutos
-    },
-}
-
-
