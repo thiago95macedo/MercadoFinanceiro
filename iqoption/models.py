@@ -22,9 +22,9 @@ class AtivosBinarios(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo AUDCAD
 class CandlesAUDCAD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -43,9 +43,9 @@ class CandlesAUDCAD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo AUDCAD-OTC
 class CandlesAUDCADotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -64,9 +64,9 @@ class CandlesAUDCADotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo AUDCHF
 class CandlesAUDCHF(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -85,9 +85,9 @@ class CandlesAUDCHF(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo AUDJPY
 class CandlesAUDJPY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -106,9 +106,9 @@ class CandlesAUDJPY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo AUDNZD
 class CandlesAUDNZD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -127,9 +127,9 @@ class CandlesAUDNZD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo AUDUSD
 class CandlesAUDUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -148,9 +148,9 @@ class CandlesAUDUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo BTCUSD
 class CandlesBTCUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -169,9 +169,9 @@ class CandlesBTCUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo CADCHF
 class CandlesCADCHF(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -190,9 +190,9 @@ class CandlesCADCHF(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo CADJPY
 class CandlesCADJPY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -211,9 +211,9 @@ class CandlesCADJPY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo CHFJPY
 class CandlesCHFJPY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -232,9 +232,9 @@ class CandlesCHFJPY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EOSUSD
 class CandlesEOSUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -253,9 +253,9 @@ class CandlesEOSUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo ETHUSD
 class CandlesETHUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -274,9 +274,9 @@ class CandlesETHUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURAUD
 class CandlesEURAUD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -295,9 +295,9 @@ class CandlesEURAUD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURCAD
 class CandlesEURCAD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -316,9 +316,9 @@ class CandlesEURCAD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURCHF
 class CandlesEURCHF(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -337,9 +337,9 @@ class CandlesEURCHF(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURGBP
 class CandlesEURGBP(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -358,9 +358,9 @@ class CandlesEURGBP(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURGBP-OTC
 class CandlesEURGBPotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -379,9 +379,9 @@ class CandlesEURGBPotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURJPY
 class CandlesEURJPY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -400,9 +400,9 @@ class CandlesEURJPY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURJPY-OTC
 class CandlesEURJPYotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -421,9 +421,9 @@ class CandlesEURJPYotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURNZD
 class CandlesEURNZD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -442,9 +442,9 @@ class CandlesEURNZD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURUSD
 class CandlesEURUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -463,9 +463,9 @@ class CandlesEURUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo EURUSD-OTC
 class CandlesEURUSDotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -484,9 +484,9 @@ class CandlesEURUSDotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPAUD
 class CandlesGBPAUD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -505,9 +505,9 @@ class CandlesGBPAUD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPCAD
 class CandlesGBPCAD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -526,9 +526,9 @@ class CandlesGBPCAD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPCHF
 class CandlesGBPCHF(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -547,9 +547,9 @@ class CandlesGBPCHF(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPJPY
 class CandlesGBPJPY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -568,9 +568,9 @@ class CandlesGBPJPY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPJPY-OTC
 class CandlesGBPJPYotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -589,9 +589,9 @@ class CandlesGBPJPYotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPNZD
 class CandlesGBPNZD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -610,9 +610,9 @@ class CandlesGBPNZD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPUSD
 class CandlesGBPUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -631,9 +631,9 @@ class CandlesGBPUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo GBPUSD-OTC
 class CandlesGBPUSDotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -652,9 +652,9 @@ class CandlesGBPUSDotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo LTCUSD
 class CandlesLTCUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -673,9 +673,9 @@ class CandlesLTCUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo NZDUSD
 class CandlesNZDUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -694,9 +694,9 @@ class CandlesNZDUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo NZDUSD-OTC
 class CandlesNZDUSDotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -715,9 +715,9 @@ class CandlesNZDUSDotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDBRL
 class CandlesUSDBRL(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -736,9 +736,9 @@ class CandlesUSDBRL(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDCAD
 class CandlesUSDCAD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -757,9 +757,9 @@ class CandlesUSDCAD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDCHF
 class CandlesUSDCHF(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -778,9 +778,9 @@ class CandlesUSDCHF(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDCHF-OTC
 class CandlesUSDCHFotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -799,9 +799,9 @@ class CandlesUSDCHFotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDHKD
 class CandlesUSDHKD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -820,9 +820,9 @@ class CandlesUSDHKD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDHKD-OTC
 class CandlesUSDHKDotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -841,9 +841,9 @@ class CandlesUSDHKDotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDINR
 class CandlesUSDINR(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -862,9 +862,9 @@ class CandlesUSDINR(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDINR-OTC
 class CandlesUSDINRotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -883,9 +883,9 @@ class CandlesUSDINRotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDJPY
 class CandlesUSDJPY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -904,9 +904,9 @@ class CandlesUSDJPY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDJPY-OTC
 class CandlesUSDJPYotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -925,9 +925,9 @@ class CandlesUSDJPYotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDNOK
 class CandlesUSDNOK(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -946,9 +946,9 @@ class CandlesUSDNOK(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDPLN
 class CandlesUSDPLN(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -967,9 +967,9 @@ class CandlesUSDPLN(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDRUB
 class CandlesUSDRUB(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -988,9 +988,9 @@ class CandlesUSDRUB(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDSEK
 class CandlesUSDSEK(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1009,9 +1009,9 @@ class CandlesUSDSEK(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDSGD
 class CandlesUSDSGD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1030,9 +1030,9 @@ class CandlesUSDSGD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDSGD-OTC
 class CandlesUSDSGDotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1051,9 +1051,9 @@ class CandlesUSDSGDotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDTRY
 class CandlesUSDTRY(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1072,9 +1072,9 @@ class CandlesUSDTRY(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDZAR
 class CandlesUSDZAR(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1093,9 +1093,9 @@ class CandlesUSDZAR(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDZAR-OTC
 class CandlesUSDZARotc(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1114,9 +1114,9 @@ class CandlesUSDZARotc(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USOUSD
 class CandlesUSOUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1135,9 +1135,9 @@ class CandlesUSOUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo XAUUSD
 class CandlesXAUUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
@@ -1156,9 +1156,9 @@ class CandlesXAUUSD(models.Model):
 # Modelo de Dados para Armazenar Informações de Velas do Ativo XRPUSD
 class CandlesXRPUSD(models.Model):
 
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário')
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp')
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora')
+    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
+    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
+    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
     candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
     candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
     candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)

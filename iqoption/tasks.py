@@ -109,7 +109,7 @@ def atualizar_ativos_binarios(self, iqoption_record, IQAPI):
 
     logger.info('Atualização do status dos ativos concluída.')    
 
-# AUDCAD - Atuaçização de Candlesticks
+# AUDCAD - Atualização de Candlesticks
 @shared_task(bind=True)
 def atualizar_candles_audcad(self, iqoption_record, IQAPI):
     logger.info('Iniciando a tarefa atualizar_candles_audcad.')
