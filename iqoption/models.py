@@ -962,27 +962,6 @@ class CandlesUSDPLN(models.Model):
         naive_datetime = datetime.fromtimestamp(self.candle_timestamp)
         aware_datetime = timezone.make_aware(naive_datetime)
         self.candle_datetime = aware_datetime
-        super().save(*args, **kwargs)    
-
-# Modelo de Dados para Armazenar Informações de Velas do Ativo USDPLN
-class CandlesUSDPLN(models.Model):
-
-    ativo_binario = models.ForeignKey(AtivosBinarios, on_delete=models.CASCADE, verbose_name= 'Ativo Binário', null=True)
-    candle_timestamp = models.IntegerField(verbose_name= 'Timestamp', null=True)
-    candle_datetime = models.DateTimeField(verbose_name= 'Data e Hora', null=True)
-    candle_open = models.DecimalField(verbose_name= 'Abertura', max_digits=10, decimal_places=5, default=0.00)
-    candle_high = models.DecimalField(verbose_name= 'Máxima', max_digits=10, decimal_places=5, default=0.00)
-    candle_low = models.DecimalField(verbose_name= 'Mínima', max_digits=10, decimal_places=5, default=0.00)
-    candle_close = models.DecimalField(verbose_name= 'Fechamento', max_digits=10, decimal_places=5, default=0.00)
-    candle_volume = models.DecimalField(verbose_name= 'Volume', max_digits=10, decimal_places=5, default=0.00)
-
-    def __str__(self):
-        return f'{self.candle_datetime} - {self.ativo_binario.ativo_binario} - {self.candle_open} - {self.candle_high} - {self.candle_low} - {self.candle_close} - {self.candle_volume}'
-
-    def save(self, *args, **kwargs):
-        naive_datetime = datetime.fromtimestamp(self.candle_timestamp)
-        aware_datetime = timezone.make_aware(naive_datetime)
-        self.candle_datetime = aware_datetime
         super().save(*args, **kwargs)
 
 # Modelo de Dados para Armazenar Informações de Velas do Ativo USDRUB
