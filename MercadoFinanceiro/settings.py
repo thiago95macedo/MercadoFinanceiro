@@ -138,5 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://pypi.org/project/django-crontab/
 
 CRONJOBS = [
-    ('5,10,15,20,25,30,35,40,45,50,55 * * * *', 'iqoption.cron.cron_atualizar_ativos_binarios')
+    ('0,5,10,15,20,25,30,35,40,45,50,55 * * * *', 'iqoption.cron.cron_atualizar_ativos_binarios')
 ]
